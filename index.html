@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Title of the document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css"
+    integrity="sha256-bCQF5OufWlWM/MW9mCb/eDibvff1W8BNq9ZK69C8FSI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-blue-500 h-screen">
+
+<div class="flex flex-row justify-center w-full mt-10">
+
+
+  <div class="h-10 w-20 bg-gray-100 rounded ml-2 drag-drop" id="yes-drop">
+    <div class="flex">
+      <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+        <path
+          d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+        </svg>
+
+        <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+          <path
+            d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+        </svg>
+    </div>
+  </div>
+
+
+
+  <div class="h-10 w-20 bg-gray-100 rounded ml-2 drag-drop" id="yes-drop">
+
+      <div class="flex">
+        <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+          <path
+            d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+          </svg>
+  
+          <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+   
+      </div>
+  
+    </div>
+
+
+
+  <div class="h-10 w-20 bg-gray-100 rounded ml-2 drag-drop" id="yes-drop">
+
+      <div class="flex">
+        <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+          <path
+            d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+          </svg>
+  
+          <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+   
+      </div>
+  
+    </div>
+
+
+
+  <div class="h-10 w-20 bg-gray-100 rounded ml-2 drag-drop" id="yes-drop">
+
+      <div class="flex">
+        <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+          <path
+            d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+          </svg>
+  
+          <svg class="h-8 w-8 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"s>
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+            </svg>
+   
+      </div>
+
+
+    </div>
+  
+    </div>
+
+
+
+    <main id="inner-dropzone" class="w-9/12 h-64 mt-10 bg-blue-600 block mx-auto dropzone">
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.6.2/dist/interact.min.js"></script>
+    <script>
+
+interact('.dropzone').dropzone({
+  // only accept elements matching this CSS selector
+  accept: '#yes-drop',
+  // Require a 75% element overlap for a drop to be possible
+  overlap: 0.75,
+
+  // listen for drop related events:
+
+  ondropactivate: function (event) {
+    // add active dropzone feedback
+    event.target.classList.add('drop-active')
+  },
+  ondragenter: function (event) {
+    var draggableElement = event.relatedTarget
+    var dropzoneElement = event.target
+
+    // feedback the possibility of a drop
+    dropzoneElement.classList.add('drop-target')
+    draggableElement.classList.add('can-drop')
+    // draggableElement.textContent = 'Dragged in'
+  },
+  ondragleave: function (event) {
+    // remove the drop feedback style
+    event.target.classList.remove('drop-target')
+    event.relatedTarget.classList.remove('can-drop')
+    // event.relatedTarget.textContent = 'Dragged out'
+  },
+  ondrop: function (event) {
+    // event.relatedTarget.textContent = 'Dropped'
+  },
+  ondropdeactivate: function (event) {
+    // remove active dropzone feedback
+    event.target.classList.remove('drop-active')
+    event.target.classList.remove('drop-target')
+  }
+})
+
+interact('.drag-drop')
+  .draggable({
+    inertia: true,
+    autoScroll: true,
+    // dragMoveListener from the dragging demo above
+    onmove: dragMoveListener
+  })
+
+  function dragMoveListener (event) {
+    var target = event.target,
+        // keep the dragged position in the data-x/data-y attributes
+        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+    // translate the element
+    target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)';
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  }
+
+    </script>
+</body>
+
+</html>
